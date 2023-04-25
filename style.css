@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Desktop Design */
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 1rem;
+}
+
+/* Syling the container */
+
+.container {
+  width: 850px;
+  background-color: white;
+  position: relative;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.content {
+  margin: 120px 0 50px 0;
+}
+
+/* Styling and positioning the pictures */
+
+.desk_picture {
+  display: none;
+}
+
+.mobile_picture {
+  width: 250px;
+  top: -115px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+.mobile_shadow {
+  width: 250px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.box_picture {
+  display: none;
+}
+
+/* Styling the text  */
+
+.title {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+section {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  padding: 0.7rem 0;
+  color: hsl(240, 6%, 50%);
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 0.5rem;
+}
+
+.wrapper img {
+  cursor: pointer;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.hidden {
+  display: none;
+}
+
+.question_frase {
+  color: black;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    padding: 2rem;
+  }
+
+  .container {
+    padding: 50px 0;
+    overflow: visible;
+    position: relative;
+  }
+
+  .content {
+    margin: 0;
+    width: 100%;
+    padding: 0px 60px 0 10px;
+    justify-content: space-between;
+  }
+
+  .content_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    box-sizing: border-box;
+  }
+
+  .display_img {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .mobile_picture,
+  .mobile_shadow {
+    display: none;
+  }
+
+  .desk_picture {
+    display: block;
+    margin-left: -88px;
+  }
+
+  .box_picture {
+    display: block;
+    position: absolute;
+    left: -95px;
+    top: 170px;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
